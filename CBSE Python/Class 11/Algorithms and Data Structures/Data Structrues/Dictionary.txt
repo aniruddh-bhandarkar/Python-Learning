@@ -1,0 +1,16 @@
+1) Dictionary has the following important terms:
+a. d={} or d=dict() to create a new dictionary
+b. add key-value pairs to dictionary
+     word to value eg. d['xyz']=123
+      x ->1;y->2;z->3 
+c.Keys can used d.keys() and d.values()
+d.iteration over a dictionary
+    for i in d:
+           print  %s %d  %(i,d[i])
+e. Few more useful controls in Python:	
+1.Break
+2.Continue
+3.Pass
+4.Map
+5.Filter
+6.Lambda
