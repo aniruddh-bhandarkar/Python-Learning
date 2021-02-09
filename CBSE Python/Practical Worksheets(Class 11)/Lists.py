@@ -73,7 +73,7 @@ def f2():
             break
         else:
             print("Please enter an appropriate option")
-#Question 3
+#Question 3(Used answer)
 def f3():
     ch=int(input("Enter choice:\n1.Input 2 matrices and find their sum\n2.Input a matrix and find its transpose"))
     if ch==1:
