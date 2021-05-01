@@ -14,6 +14,7 @@ for i in range(n):
     key=input("Product Name")
     value=(input("Price"))
     dict[key]=value
+    
 
 print("Enter product name")
 print([key])
@@ -50,7 +51,6 @@ def keys():
     for i in lst: #i is also the key of dct -d
         print("key=",i,"value=",d[i])
 #Question 6(Using tuples in dictionaries)
-dict={ios:(1,2,3,4),ui:89,i:90}
 #Question 7
 a={1:"A",2:"B",3:"C"}
 print(a.get(1,4))

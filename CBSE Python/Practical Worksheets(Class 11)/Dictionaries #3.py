@@ -1,21 +1,21 @@
 #1
 def f1():
-n=int(input("Enaer no. of Employees"))
-    Employee={}
+    n=int(input("Enter no. of employees"))
+    Emp={}
     for i in range(n):
-        Enum=int(input("Enaer Employee no."))
-        En=input("Enaer Employee name")
-        Employee[Enum]=Enam
-    a=Employee.keys()
-    a=lisa(a)
-    a.sort()
-    prina("Employee name")
-    for i in a:
-        prina(i,Employee[i],sep="\a\a")
+        Enum=int(input("Enter employee no."))
+        Enam=input("Enter employee name")
+        Emp[Enum]=Enam
+    T=Emp.keys()
+    T=list(T)
+    T.sort()
+    print("Employee's information:\nEmp.no.\tEmp.name")
+    for i in T:
+        print(i,Emp[i],sep="\t\t")
 #2. Phone book
 def f2():
     n=int(input("Enter no. of people"))
-    Pa={}
+    Ph={}
     for i in range(n):
         Name=input("Enter name "+str(i+1))
         x,t=1,[]
@@ -23,20 +23,20 @@ def f2():
             p=int(input("Enter phone no. "+str(x)))
             t.append(p)
             x+=1
-            ch=input("Do you want to continue ")
-            if ch in "Na":
+            ch=input("Do you want to continue?'Y' or 'N'")
+            if ch in "Nn":
                 break
-        Pa[Name]=t
+        Ph[Name]=t
     print("Name\tPh.no.s")
-    for i in Pa.keys():
+    for i in Ph.keys():
         print(i,Ph[i],sep='\t\t')
     while True:
         N=input("Enter which person's ph no. you want to delete")
-        if N in Pa.keys():
+        if N in Ph.keys():
             print(Ph[N])
-            Pi=int(input("Enter which ph no. you want to delete"))
-            if Pi in Pa[N]:
-                Pa[N].remove(P)
+            P=int(input("Enter which ph no. you want to delete"))
+            if P in Ph[N]:
+                Ph[N].remove(P)
                 print("Phone no. deleted")
             else:
                 print("Phone number not found")
@@ -46,58 +46,64 @@ def f2():
     print("Edited phone book:\nName\tPh.no.s")
     for i in Ph.keys():
         print(i,Ph[i],sep="\t\t")
+ 
 #3. Write a program to input the following date for ‘n’ years: population of corresponding cities along with increase and decrease percentage.
 def f3():
     n=int(input("Enter how many countries"))
-    Ps={}
+    Pop={}
     for i in range(n):
-        Name=input("Enter country "+str(j+1))
-        P=int(input("Enter population of "+City Name))
-        In=float(input("Enter increase percentage of population"))
-        D=float(input("Enter decrease percentage of population"))
-        Ps[Name]=[P,Inc,Dec]#Ps is just a dictionary name and is not P 
-    t = Ps.keys()
+        Name=input("Enter country "+str(i+1))
+        P=int(input("Enter population of "+Name))
+        Inc=float(input("Enter increase percentage of population"))
+        Dec=float(input("Enter decrease percentage of population"))
+        Pop[Name]=[P,Inc,Dec]
+    t = Pop.keys()
     while True:
-        c=int(input("Kindly enter your choice:/n1."))
-        if c==1:
+        ch=int(input("Enter choice:\n1. Display all country details in alphabetical order\n2. Display all countries with no increase\n3. Display all countries with increase above 20%"))
+        if ch==1:
             t=list(t)
             t.sort()
-            print("Countries in Alphabetical order.")
+            print("Country\tPopulation\tInc\tDec")
             for i in t:
-                print(i,Ps[j][0],Ps[j][1],Ps[j][2],sep='\t\t')
-        elif c==2:
+                print(i,Pop[i][0],Pop[i][1],Pop[i][2],sep='\t\t')
+        if ch==2:
             print("Countries with no increase")
-            for j in t:
-                if Ps[j][1]==0:
+            for i in t:
+                if Pop[i][1]==0:
                     print(i,end=', ')
-        elif c==3:
+        if ch==3:
             print("Countries with increase above 20%")
-            for j in t:
-                if Ps[i][1]>20:
+            for i in t:
+                if Pop[i][1]>20:
                     print(i, end=', ')
-#4
-n=int(input("Enter an email"))
-     for i in range(n):
+        C=input("\nDo you want to continue entering choices? 'Y' or 'N'")
+        if C in "Nn":
+            break
+#4.
+def f4():
+    n=int(input("Enter how many words"))
+    W=[]
+    for i in range(n):
         w=input("Enter word "+str(i+1))
         W.append(w)
-    Lostkey={}
+    Lc={}
     print("Word\tLetter count")
     for i in W:
         Lc[i]=len(i)
-    t=Lostkey.values()
+    t=Lc.values()
     t=list(t)
     t.sort()
     for i in t:
-        for j in W:#Using same variables as given in the answer for convience 
-            if Lostkey[j]==i:
+        for j in W:
+            if Lc[j]==i:
                 print(j,i,sep='\t\t')
     for i in W:
-        if Lostkey[i]>5:
-            while True:#Converted to while statment from for using the solutions set 
+        if Lc[i]>5:
+            while True:
                 w=input("Replace "+i+" with a word having less than 5 letters")
                 if len(w)<5:
-                    del(Lostkey[i])
-                    Lostkey[w]=len(w)
+                    del(Lc[i])
+                    Lc[w]=len(w)
                     f=W.index(i)
                     W.remove(i)
                     W.insert(f,w)
@@ -106,12 +112,8 @@ n=int(input("Enter an email"))
                     print("Word had more than 5 letters")
     print("Edited list:\n",W)
     print("Word\tLetter count")
-    y=Lostkey.values()
-    for i in ty:
+    t=Lc.values()
+    for i in t:
         for j in W:
             if Lc[j] == i:
-                print(j, i, sep='\n\n')
-#5
-def f5():
-    
-
+                print(j, i, sep='\t\t')
