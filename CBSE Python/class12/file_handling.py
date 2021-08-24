@@ -25,6 +25,7 @@ def disp2():
         f1.close()
     except FileExistsError:
         print("This file does not exists")
+ 
 
 #f1.seek() will be ignored in append(a+)mode
 make()
