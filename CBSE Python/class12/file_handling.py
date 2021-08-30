@@ -1,5 +1,5 @@
 
-def make():
+"""def make():
     f1=open("q1.txt","w")
     n=int(input("Enter number of lines:\n"))
     for i in range(n):
@@ -24,9 +24,18 @@ def disp2():
         print(st)
         f1.close()
     except FileExistsError:
-        print("This file does not exists")
- 
+        print("This file does not exists")"""
+def copy():
+    f1=open("/Users/aniruddh/documents/Q4.txt")
+    f2=open("/Users/aniruddh/documents/Q4copy.txt","w")
+    for i in f1:
+        lst=i.split()
+        st=''.join(lst)
+        f2.write(st+'\n')
+    f1.close()
+    f2.close()
+
 
 #f1.seek() will be ignored in append(a+)mode
-make()
-disp()
+"""make()
+disp()"""
