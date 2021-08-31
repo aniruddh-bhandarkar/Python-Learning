@@ -24,7 +24,7 @@ def disp2():
         print(st)
         f1.close()
     except FileExistsError:
-        print("This file does not exists")"""
+        print("This file does not exists")
 def copy():
     f1=open("/Users/aniruddh/documents/Q4.txt")
     f2=open("/Users/aniruddh/documents/Q4copy.txt","w")
@@ -37,5 +37,26 @@ def copy():
 
 
 #f1.seek() will be ignored in append(a+)mode
-"""make()
+make()
 disp()"""
+
+import pickle
+def make():
+    n=int(input("enter number of records"))
+    with open("q1.dat","wb") as f1:
+        for i in range(n):
+            m=int(input("enter member no."))
+            nm=input("enter number")
+            d={'memeber no':m,'name':nm}
+            pickle.dump(d,f1)
+def disp():
+    with open("q1.dat","rb") as f1:
+        while True:
+            try:
+                d1=pickle.load(f1)
+                print(d1)
+            except EOFError:
+                break
+make()
+disp()
+
