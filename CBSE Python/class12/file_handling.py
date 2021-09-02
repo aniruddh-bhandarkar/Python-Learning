@@ -57,6 +57,11 @@ def disp():
                 print(d1)
             except EOFError:
                 break
+def makeb():
+    f1=open('s1.dat','wb')
+    n=int(input('how many?'))
 make()
+print("file before changes...")
 disp()
+print("file after changes...")
 
